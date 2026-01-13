@@ -1,15 +1,26 @@
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
 services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
-    network_mode: host # Required for DHCP to see the server's real IP
+    network_mode: host # Required for DHCP broadcast to reach the container
     environment:
-      TZ: 'UTC'
-      WEBPASSWORD: 'your_password'
-      FTLCONF_LOCAL_IPV4: '10.0.201.202' # Your server's IP
+      TZ: 'Europe/London' # Set to your location
+      # Pi-hole v6 password variable
+      FTLCONF_webserver_api_password: 'your_secret_password' 
+      # Fix browser access by forcing web server to Port 8080 (Host Mode ignores "ports:" section)
+      FTLCONF_webserver_port: '8080'
+      # Important for Rootless/Docker networking visibility
+      FTLCONF_dns_listeningMode: 'ALL'
+      # Required for AlmaLinux 9 / Rootless permission fixes
       DNSMASQ_USER: 'root'
-      FTLCONF_dns_listeningMode: 'all'
+      FTLCONF_LOCAL_IPV4: '10.0.201.202'
     volumes:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    cap_add:
+      - NET_ADMIN # Required for DHCP server functionality
+      - SYS_TIME  # Required for NTP
+      - SYS_NICE  # Performance boost
+      - NET_RAW   # Essential for DHCP broadcast packets
     restart: unless-stopped
