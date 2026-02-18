@@ -20,9 +20,11 @@ function Lisa-Kontroll {
     $tulemused.Add([PSCustomObject]@{ Checkpoint = $Nimi; Status = $Staatus })
 }
 
+$IPCheck = (Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -match "^10\.0\..*\.10$" }).Count -gt 0
+
 # --- START CHECKS ---
 Lisa-Kontroll "Server Name is AD1" ($env:COMPUTERNAME -eq "AD1")
-Lisa-Kontroll "IP is 10.0.x.10" ((Get-NetIPAddress -AddressFamily IPv4 | Where-Object IPAddress -like "10.0.201.10").Count -gt 0)
+Lisa-Kontroll "IP is 10.0.x.10" ($IPCheck)
 Lisa-Kontroll "Domain perenimi.local" (Test-Connection -ComputerName "KRUTTO.LOCAL" -Count 1 -Quiet -ErrorAction SilentlyContinue)
 
 # OUs
