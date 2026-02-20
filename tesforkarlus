@@ -1,0 +1,48 @@
+<?php
+$paring = 'SELECT * FROM cars'; // Original string
+
+if (isset($_GET["search"])) {
+  $otsi = $_GET["search"];
+  // Added a space before WHERE
+  $paring .= ' WHERE mark LIKE "%'.$otsi.'%"'; 
+}
+
+// Added a space before LIMIT just to be safe
+$paring .= ' LIMIT 12'; 
+
+$valjund = mysqli_query($yhendus, $paring);
+?>
+
+
+        <!-- autode kaardid -->
+        <div class="container">
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Auto</strong> otsingut ei leitud!.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <div class="row">
+            <?php
+        while($rida = mysqli_fetch_row($valjund)){ 
+            ?>
+            <!-- kaart --> 
+            <div class="col-sm-3">
+              <div class="card my-2" style="width: 19rem;">
+                <img src="https://loremflickr.com/600/350/<?php echo $rida[1]; ?>" class="card-img-top" alt="auto">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col"><h5 class="card-title"><?php echo $rida[1]; ?></h5></div>
+                    <div class="col text-end"><i class="bi bi-heart"></i></div>
+                  </div>
+
+                  <p class="card-text text-secondary"><?php echo $rida[2]; ?></p>
+                  <p class="card-text">
+                  Mootor: <?php echo $rida[3]; ?><br>
+                  Kütus: <?php echo $rida[4]; ?><br>
+                  Hind: <?php echo $rida[5]; ?>€/päev</p>
+                  <a href="#" class="btn btn-dark w-100">Rendi</a>
+                </div>
+              </div>
+            </div>
+            <!-- /kaart -->
+           <?php } ?>
