@@ -1,0 +1,75 @@
+# Funktsioon tulemuse märgistamiseks
+function Test-Rule {
+    param ([boolean]$Condition)
+    return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
+}
+
+$Raport = New-Object System.Collections.Generic.List[PSObject]
+
+# 1. Baasvõrk ja domeen
+$Hostname = hostname
+$IP = (Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -notlike "*Loopback*" }).IPAddress
+$DomainExists = Get-ADDomain "perenimi.local" -ErrorAction SilentlyContinue
+
+$Raport.Add([PSCustomObject]@{Kontroll = "Serveri nimi on AD1"; Staatus = Test-Rule ($Hostname -eq "AD1")})
+$Raport.Add([PSCustomObject]@{Kontroll = "IP on 10.0.XXX.10"; Staatus = Test-Rule ($IP -like "10.0.*.10")})
+$Raport.Add([PSCustomObject]@{Kontroll = "Domeen perenimi.local"; Staatus = Test-Rule ($null -ne $DomainExists)})
+
+# 2. Active Directory struktuur (OU-d ja Grupid)
+$OUs = @("KASUTAJAD", "LEKTORID", "TUDENGID", "ARVUTID")
+foreach ($ou in $OUs) {
+    $Exists = Get-ADOrganizationalUnit -Filter "Name -eq '$ou'" -ErrorAction SilentlyContinue
+    $Raport.Add([PSCustomObject]@{Kontroll = "OU $ou olemasolu"; Staatus = Test-Rule ($null -ne $Exists)})
+}
+
+$Groups = @("Lektorid", "Tudengid", "RedirectedDirectories")
+foreach ($grp in $Groups) {
+    $Exists = Get-ADGroup -Filter "Name -eq '$grp'" -ErrorAction SilentlyContinue
+    $Raport.Add([PSCustomObject]@{Kontroll = "Grupp $grp olemasolu"; Staatus = Test-Rule ($null -ne $Exists)})
+}
+
+# 3. Kasutajad ja kuuluvus
+$Users = @("oppejoud1", "oppejoud2", "tudeng1", "tudeng2")
+foreach ($u in $Users) {
+    $UserObj = Get-ADUser -Identity $u -Properties MemberOf -ErrorAction SilentlyContinue
+    $Raport.Add([PSCustomObject]@{Kontroll = "Kasutaja $u olemasolu"; Staatus = Test-Rule ($null -ne $UserObj)})
+}
+
+# 4. Serveri rollid
+$Roles = @("AD-Domain-Services", "DHCP", "DNS", "WDS", "Web-Server")
+foreach ($role in $Roles) {
+    $IsInstalled = (Get-WindowsFeature -Name $role).Installed
+    $Raport.Add([PSCustomObject]@{Kontroll = "Roll $role paigaldatud"; Staatus = Test-Rule ($IsInstalled)})
+}
+
+# 5. DHCP Skoop
+$DHCPScope = Get-DhcpServerv4Scope | Where-Object { $_.Name -eq "HKHK" }
+$Raport.Add([PSCustomObject]@{Kontroll = "DHCP skoop 'HKHK'"; Staatus = Test-Rule ($null -ne $DHCPScope)})
+
+# 6. Failiteenused ja DFS
+$Paths = @("F:\DFS_Lektoritele", "F:\DFS_Tudengitele")
+foreach ($p in $Paths) {
+    $Raport.Add([PSCustomObject]@{Kontroll = "Kaust $p"; Staatus = Test-Rule (Test-Path $p)})
+}
+$DFS = Get-DfsnRoot -Path "\\perenimi.local\Tudengid" -ErrorAction SilentlyContinue
+$Raport.Add([PSCustomObject]@{Kontroll = "DFS nimeruum \Tudengid"; Staatus = Test-Rule ($null -ne $DFS)})
+
+# 7. GPO-d
+$GPOs = @("7zip", "Chrome", "Wallpaper")
+foreach ($g in $GPOs) {
+    $GPOExists = Get-GPO -Name $g -ErrorAction SilentlyContinue
+    $Raport.Add([PSCustomObject]@{Kontroll = "GPO $g olemasolu"; Staatus = Test-Rule ($null -ne $GPOExists)})
+}
+
+# 8. Turvalisus (LAPS)
+$LAPS = Get-Command -Module Microsoft.Windows.LAPS -ErrorAction SilentlyContinue
+$Raport.Add([PSCustomObject]@{Kontroll = "LAPS moodul"; Staatus = Test-Rule ($null -ne $LAPS)})
+
+# BOONUS: Litsentsi kontroll
+$License = Get-CimInstance SoftwareLicensingProduct | Where-Object { $_.PartialProductKey -and $_.ApplicationID -eq "55c282d8-bf17-464f-9561-fa08d992f17d" }
+$DaysLeft = [Math]::Round($License.RemainingGracePeriod / 1440, 0)
+$Raport.Add([PSCustomObject]@{Kontroll = "Litsentsi jääk (päevi: $DaysLeft)"; Staatus = "INFO"})
+
+# VÄLJASTUS
+Write-Host "`n--- KURSUSE PROGRESSI RAPORT ---" -ForegroundColor Cyan
+$Raport | Format-Table -AutoSize
