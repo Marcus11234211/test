@@ -1,0 +1,227 @@
+Get-ADDomain : Cannot find an object with identity: 'perenimi.local' under: 'DC=KRUTTO,DC=LOCAL'.
+At C:\Skriptid\tlemused3.ps1:14 char:17
++ ... ainExists = Get-ADDomain "perenimi.local" -ErrorAction SilentlyContin ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (perenimi.local:ADDomain) [Get-ADDomain], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : ActiveDirectoryCmdlet:Microsoft.ActiveDirectory.Management.ADIdentityNotFoundException,Microsoft.Act 
+   iveDirectory.Management.Commands.GetADDomain
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+if : The term 'if' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the
+ name, or if a path was included, verify that the path is correct and try again.
+At C:\Skriptid\tlemused3.ps1:4 char:12
++     return if ($Condition) { "TEHTUD" } else { "TEGEMATA" }
++            ~~
+    + CategoryInfo          : ObjectNotFound: (if:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+Raport on valmis ja salvestatud töölauale: C:\Users\Administrator\Desktop\Raport.html
+
+PS C:\Users\Administrator> 
