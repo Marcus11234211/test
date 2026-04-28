@@ -1,0 +1,36 @@
+#include <tunables/global>
+
+/usr/sbin/sshd {
+  #include <abstractions/base>
+  #include <abstractions/authentication>
+  #include <abstractions/nameservice>
+
+  capability sys_chroot,
+  capability sys_resource,
+  capability sys_tty_config,
+  capability net_bind_service,
+  capability chown,
+  capability fowner,
+  capability kill,
+  capability setgid,
+  capability setuid,
+  capability dac_override,
+  capability dac_read_search,
+  capability audit_write,
+  capability audit_control,
+
+  /usr/sbin/sshd mr,
+  /etc/ssh/** r,
+  /etc/hosts.allow r,
+  /etc/hosts.deny r,
+  /var/log/btmp rw,
+  /var/log/wtmp rw,
+  /var/log/lastlog rw,
+  /run/sshd.pid rw,
+  /run/sshd/** rw,
+  /proc/*/fd/ r,
+  /proc/*/loginuid rw,
+  /dev/ptmx rw,
+  /dev/pts/* rw,
+  /dev/urandom r,
+}
