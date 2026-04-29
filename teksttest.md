@@ -1,6 +1,6 @@
 # Trennianalüüsi selgitus
 
-**Andmeallikas:** Loogiliselt välja mõeldud testandmed Sportbase ERD põhjal (september 2025, 4 nädalat).
+**Admed:** Loogiliselt välja mõeldud testandmed Sportbase ERD põhjal. Andmed palusin välja mõelda Ai-l, täpsema vastuse saamiseks jagasin varasemalt tehtud dokumente (peamiselt Excel faile).
 
 ## Mida graafik näitab?
 
@@ -20,28 +20,4 @@ Teine lihtsam kontroll: kui **hõivatus langeb rohkem kui 15–20 protsendipunkt
 
 Kui hõivatus langeb **alla 50%** kolmel järjestikusel nädalal, tuleks kaaluda treeninguaja muutmist või reklaami.
 
-
-
-
-# Treeningandmete analüüs
-
-**Andmed:** Sportbase ERD testandmed (september 2025, 4 nädalat).
-
-## Graafiku selgitus
-Graafik annab ülevaate kolme ala — **võrkpalli, korvpalli ja jõusaali** — populaarsusest. Tulbad näitavad treeningutel osalejate arvu ning joon tähistab üldist keskmist täituvust nädalate lõikes.
-
-## Mida andmed meile ütlevad?
-
-* **Edukas treening:** Kui täituvus püsib üle **80%**, on saal ja treeneri aeg maksimaalselt ära kasutatud. Suurepärane näide on **korvpall**, mis kasvas nelja nädalaga 53% pealt täieliku ehk **100%** täituvuseni.
-* **Ohumärgid:** Muret tekitab **võrkpall**, kus osalus on langenud neli nädalat järjest (93% → 60%). Kui langus toimub kolm või enam korda järjest, pole see enam juhus, vaid viitab probleemile.
-
-## Millal on langus päriselt murettekitav?
-
-Selleks, et eristada juhuslikku kõikumist (nt haigused või ilm) süsteemsest veast, tasub jälgida järgmist:
-
-1.  **Liikuv keskmine:** Kui uue nädala tulemus on pidevalt madalam kui eelneva perioodi keskmine, on tegemist kindla langustrendiga.
-2.  **Järsk kukkumine:** Kui täituvus langeb kahe nädala vahel üle **15–20%**, vajab see kohest tähelepanu. Võrkpalli puhul oli kukkumine 26%, mis on selge häirekell.
-3.  **Kriitiline piir:** Kui grupp on pooltühi (täituvus **alla 50%**) kolm nädalat järjest, tuleks kaaluda uut kellaaega või lisareklaami.
-
----
-*Dokumentatsioon on valminud tehisintellekti abiga vastavalt etteantud andmetele ja struktuurile.*
+Dokumentatsioon on koostatud Ai abiga. Andsin Ai-le kõik oma info, täpsustasin paari asja ja ütlesin umbes, mis kujul peab dokumentatsioon olema.
